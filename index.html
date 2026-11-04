@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fala Diana — Télécharger l'app</title>
+<meta name="description" content="Apprends le portugais du Brésil ou le français avec Fala Diana. Disponible sur l'App Store et Google Play.">
+<meta property="og:title" content="Fala Diana">
+<meta property="og:description" content="Parle comme là-bas. Disponible sur l'App Store et Google Play · Disponível na App Store e no Google Play">
+<meta property="og:image" content="https://faladiana.app/logo.png">
+<link rel="icon" href="/favicon.png">
+<script>
+  (function () {
+    var IOS = "https://apps.apple.com/app/faladiana/id6762306241";
+    var ANDROID = "https://play.google.com/store/apps/details?id=fala.diana.off";
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+      (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1); // iPad récent
+    var isAndroid = /Android/i.test(ua);
+    if (isIOS) { location.replace(IOS); }
+    else if (isAndroid) { location.replace(ANDROID); }
+  })();
+</script>
+<style>
+  :root { --bg:#F9F7F2; --ink:#2D3142; --action:#FF6B35; --green:#009B77; --card:#FFFFFF; --line:#E8E1D4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#1E2130; --ink:#F4EFE6; --card:#2A2E40; --line:#3A3F55; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display:flex; align-items:center; justify-content:center; padding:24px 16px; }
+  main { width:100%; max-width:420px; text-align:center; }
+  img.logo { width:112px; height:112px; border-radius:26px; }
+  h1 { font-size:30px; line-height:1.15; font-weight:900; margin:18px 0 6px; }
+  p { margin:0; font-size:16px; font-weight:700; line-height:1.4; }
+  p.pt { font-weight:600; opacity:.85; margin-top:2px; }
+  .btns { display:flex; flex-direction:column; gap:12px; margin:28px 0 18px; }
+  a.btn { display:flex; align-items:center; justify-content:center; min-height:56px; border-radius:14px;
+    font-size:17px; font-weight:900; text-decoration:none; }
+  a.ios { background:var(--ink); color:var(--bg); }
+  a.android { background:var(--card); color:var(--ink); border:2px solid var(--ink); }
+  .free { color:var(--green); font-size:14px; font-weight:800; }
+  .stamp { display:inline-block; margin-top:26px; border:2px dashed var(--action); border-radius:12px;
+    padding:10px 14px; font-size:14px; font-weight:800; transform:rotate(-1.5deg); }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="/logo.png" alt="Logo Fala Diana" width="112" height="112">
+  <h1>Parle comme là-bas.</h1>
+  <p>Le portugais du Brésil ou le français, version vraie vie.</p>
+  <p class="pt">Fale como lá. Português do Brasil ou francês, na vida real.</p>
+  <div class="btns">
+    <a class="btn ios" href="https://apps.apple.com/app/faladiana/id6762306241">Télécharger sur l'App Store</a>
+    <a class="btn android" href="https://play.google.com/store/apps/details?id=fala.diana.off">Disponible sur Google Play</a>
+  </div>
+  <p class="free">Gratuit pour commencer · Grátis para começar</p>
+  <div class="stamp">Faux-ami du jour : « esquisito » veut dire bizarre, pas exquis.</div>
+</main>
+</body>
+</html>
